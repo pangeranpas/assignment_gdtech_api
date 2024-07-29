@@ -1,0 +1,328 @@
+{
+    "info": {
+        "name": "API Collection",
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "description": "API Collection for Customer, Product, and Sales Management",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Customer",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe\",\n    \"handphone\": \"123456789\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/customer",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["customer"]
+                }
+            }
+        },
+        {
+            "name": "Get Customer",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/customer/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["customer", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<customer_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Customer",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Smith\",\n    \"handphone\": \"987654321\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/customer/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["customer", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<customer_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Customer",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/customer/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["customer", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<customer_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Product",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Laptop\",\n    \"unit_price\": 1200,\n    \"stock\": 10\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/product",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["product"]
+                }
+            }
+        },
+        {
+            "name": "Get Product",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/product/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["product", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<product_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Product",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"Laptop Pro\",\n    \"unit_price\": 1500,\n    \"stock\": 8\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/product/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["product", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<product_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Product",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/product/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["product", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<product_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Sales",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"customer_id\": \"<customer_id>\",\n    \"product_id\": \"<product_id>\",\n    \"qty\": 2\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/sales",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["sales"]
+                }
+            }
+        },
+        {
+            "name": "Get Sales",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/sales/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["sales", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<sales_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Sales",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"customer_id\": \"<customer_id>\",\n    \"product_id\": \"<product_id>\",\n    \"qty\": 3\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:5000/sales/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["sales", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<sales_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Sales",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/sales/:id",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["sales", ":id"],
+                    "variable": [
+                        {
+                            "key": "id",
+                            "value": "<sales_id>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "List Customers",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/customers",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["customers"]
+                }
+            }
+        },
+        {
+            "name": "List Products",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/products",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["products"]
+                }
+            }
+        },
+        {
+            "name": "List Sales",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:5000/sales",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "5000",
+                    "path": ["sales"]
+                }
+            }
+        }
+    ]
+}
